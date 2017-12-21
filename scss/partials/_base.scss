@@ -1,0 +1,37 @@
+/* ------------------------------------------------------------ *\
+	Base
+\* ------------------------------------------------------------ */
+
+body {
+    font-family: $font-family;
+    font-size: $font-size-15;
+    font-weight: 300;
+    background: yellow;
+    width: 100%;
+    min-height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+h1 {
+    font-family: $font-family;
+    text-align: center;
+}
+
+h2 {
+    // font-family: $font-family;
+    // font-size: $font-size-17;
+    // font-weight: 400;
+    // color: $white;
+    // line-height: 30px;
+}
