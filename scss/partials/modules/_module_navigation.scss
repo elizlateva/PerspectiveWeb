@@ -1,0 +1,49 @@
+/* ------------------------------------------------------------ *\
+	Navigation
+\* ------------------------------------------------------------ */
+
+.nav {
+    display: none;
+    & ul {
+        & li {
+            & a {
+                position: relative;
+                color: $dark;
+                font-size: 14px;
+                font-family: $font-family;
+                line-height: 25px;
+                font-weight: 400;
+                margin: 15px 0;
+                padding: 10px 0;
+                display: block;
+                &:before,
+                &:after {
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    content: '';
+                    opacity: 0;
+                    -webkit-transition: opacity .3s, -webkit-transform .3s;
+                    -moz-transition: opacity .3s, -moz-transform .3s;
+                    transition: opacity .3s, transform .3s;
+                    -webkit-transform: translateY(-10px);
+                    -moz-transform: translateY(-10px);
+                    transform: translateY(-10px);
+                }
+            }
+        }
+    }
+    & .logo_nav {
+        display: none;
+    }
+    &.active {
+        display: block;
+        width: 100%;
+        height: 100vh;
+        transform: translateX(0);
+        text-align: center;
+        margin-top: 20px;
+        text-transform: uppercase;
+    }
+}
