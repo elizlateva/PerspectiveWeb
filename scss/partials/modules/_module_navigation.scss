@@ -47,3 +47,12 @@
         text-transform: uppercase;
     }
 }
+
+@media #{$desktop} {
+    .nav {
+        display: inline-block;
+        & ul li {
+            display: inline-block;
+        }
+    }
+}
