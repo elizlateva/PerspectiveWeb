@@ -163,7 +163,8 @@ input {
 
 /* ------------------------------------------------------------ *	Base
 \* ------------------------------------------------------------ */
-body {
+body,
+html {
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
   font-weight: 300;
@@ -204,11 +205,11 @@ h1 {
 \* ------------------------------------------------------------ */
 .header {
   position: fixed;
-  top: 0;
   left: 0;
+  top: 0;
   width: 100%;
-  height: 70px;
   background: #fff;
+  height: 91px;
 }
 
 .header .inner {
@@ -229,8 +230,8 @@ h1 {
 .phone {
   display: none;
   position: absolute;
-  top: 29px;
-  left: 10px;
+  top: 20px;
+  right: 170px;
   color: #fff;
   line-height: 25px;
 }
@@ -254,10 +255,9 @@ h1 {
 
 @media only screen and (min-width: 1023px) {
   .header {
-    height: 100px;
-    position: sticky;
+    position: static;
+    top: auto;
     bottom: 0;
-    width: 100%;
     background: yellow;
   }
   .header .inner {
@@ -269,13 +269,35 @@ h1 {
   .header .inner .nav_trigger {
     display: none;
   }
+  .phone {
+    display: block;
+  }
+  .lang {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+  }
+  .lang a {
+    color: #fff;
+  }
+  .lang a:hover {
+    color: #b2b3b4;
+    font-weight: 300;
+  }
 }
 
 /* ------------------------------------------------------------ *	Intro section
 \* ------------------------------------------------------------ */
 .intro {
-  width: 100%;
+  display: table;
+  max-height: calc(100% - 90px);
+  max-height: -webkit-calc(100% - 90px);
+  max-height: -moz-calc(100% - 90px);
+  text-align: center;
+  position: relative;
   height: 100%;
+  width: 100%;
   background-image: url("/css/images/section_intro_background.png");
   background-position: center center;
   background-repeat: no-repeat;
@@ -284,28 +306,24 @@ h1 {
 }
 
 .intro .text_center_inner {
-  height: 100%;
-  min-height: 750px;
-  width: 90%;
-  display: table;
-  margin: 0 auto;
+  position: inherit;
+  display: table-cell;
+  vertical-align: middle;
   text-align: center;
+}
+
+.intro .text_center_inner .text_center {
+  margin: 0 auto;
+  width: 90%;
   margin-right: 5%;
   margin-left: 5%;
 }
 
-.intro .text_center_inner .text_center {
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
-}
-
-.text_center .logo {
+.intro .text_center_inner .text_center .logo {
   display: block;
-  margin-top: -150px;
 }
 
-.text_center h1 {
+.intro .text_center_inner .text_center h1 {
   font-size: 30px;
   line-height: 45px;
   color: #fff;
@@ -314,39 +332,9 @@ h1 {
   margin: 50px 0;
 }
 
-.text_center .btn_right_arrow {
-  display: inline-block;
-  color: #fff;
-  padding: 15px 20px;
-  border: 1px solid #fff;
-  font-weight: 300;
-  font-size: 15px;
-}
-
-.text_center .btn_right_arrow .fa {
-  margin-left: 10px;
-}
-
-.scroll_down {
-  display: none;
-}
-
-.scroll_down button {
-  color: white;
-  font-family: "Open Sans", sans-serif;
-  font-size: 15px;
-  font-weight: 300;
-}
-
-.scroll_down button:after {
-  content: url("/css/images/scroll_down_arrow.png");
-  display: block;
-  margin-top: 10px;
-}
-
 @media only screen and (min-width: 1023px) {
-  .scroll_down {
-    display: block;
+  .text_center h1 {
+    font-size: 40px;
   }
 }
 
@@ -356,8 +344,7 @@ h1 {
   display: none;
 }
 
-.nav ul li a {
-  position: relative;
+.nav .nav_wrapper ul li a {
   color: #676767;
   font-size: 14px;
   font-family: "Open Sans", sans-serif;
@@ -366,25 +353,23 @@ h1 {
   margin: 15px 0;
   padding: 10px 0;
   display: block;
+  text-transform: uppercase;
 }
 
-.nav ul li a:before, .nav ul li a:after {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  content: '';
-  opacity: 0;
-  -webkit-transition: opacity .3s, -webkit-transform .3s;
-  -moz-transition: opacity .3s, -moz-transform .3s;
-  transition: opacity .3s, transform .3s;
-  -webkit-transform: translateY(-10px);
-  -moz-transform: translateY(-10px);
-  transform: translateY(-10px);
+.nav .nav_wrapper ul li a:hover {
+  color: #209ae7;
+  font-weight: 600;
+  border-top: 2px solid #209ae7;
+  border-bottom: 2px solid #209ae7;
 }
 
-.nav .logo_nav {
+.nav .nav_wrapper .logo_nav {
   display: none;
+}
+
+.nav .nav_wrapper .logo_nav a:hover {
+  border-top: none;
+  border-bottom: none;
 }
 
 .nav.active {
@@ -393,16 +378,281 @@ h1 {
   height: 100vh;
   transform: translateX(0);
   text-align: center;
-  margin-top: 20px;
-  text-transform: uppercase;
+  margin-top: -1px;
+  background: #fff;
 }
 
 @media only screen and (min-width: 1023px) {
   .nav {
-    display: inline-block;
+    display: block;
+    width: 100%;
+    text-align: center;
   }
-  .nav ul li {
+  .nav .nav_wrapper {
+    width: 980px;
+    margin: 0 auto;
+  }
+  .nav .nav_wrapper ul .logo_nav,
+  .nav .nav_wrapper ul li {
     display: inline-block;
+    margin: 0 10px;
+  }
+  .nav .nav_wrapper ul .logo_nav a,
+  .nav .nav_wrapper ul li a {
+    color: #676767;
+    font-size: 15px;
+  }
+}
+
+/* ------------------------------------------------------------ *	See-more
+\* ------------------------------------------------------------ */
+.btn_right_arrow {
+  position: relative;
+  display: inline-block;
+  padding: 15px 20px;
+  font-weight: 300;
+  font-size: 15px;
+  z-index: 1;
+}
+
+.btn_right_arrow .fa {
+  margin-left: 10px;
+}
+
+.btn_right_arrow.white {
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.btn_right_arrow.white:hover {
+  color: #209ae7;
+  font-weight: 600;
+}
+
+.btn_right_arrow.white:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  background: #fff;
+  height: 0;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+}
+
+.btn_right_arrow.white:hover:after {
+  height: 100%;
+}
+
+.btn_right_arrow.blue {
+  color: #209ae7;
+  border: 1px solid #209ae7;
+  margin-top: 50px;
+}
+
+.btn_right_arrow.blue:hover {
+  color: #fff;
+  font-weight: 600;
+}
+
+.btn_right_arrow.blue:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  background: #209ae7;
+  height: 0;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+}
+
+.btn_right_arrow.blue:hover:after {
+  height: 100%;
+}
+
+/* ------------------------------------------------------------ *	Scroll-down
+\* ------------------------------------------------------------ */
+.scroll_down.white {
+  display: none;
+  margin-top: 50px;
+}
+
+.scroll_down.white .arrow {
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.scroll_down.white .arrow:after {
+  content: url("/css/images/scroll_down_arrow.png");
+  display: block;
+  margin-top: 10px;
+}
+
+.scroll_down.blue {
+  display: none;
+  margin-top: 50px;
+}
+
+.scroll_down.blue .arrow {
+  color: #209ae7;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.scroll_down.blue .arrow:after {
+  content: url("/css/images/scroll_down_arrow_blue.png");
+  display: block;
+  margin-top: 10px;
+}
+
+@media only screen and (min-width: 1023px) {
+  .scroll_down.white,
+  .scroll_down.blue {
+    display: block;
+  }
+}
+
+/* ------------------------------------------------------------ *	Service section
+\* ------------------------------------------------------------ */
+.service {
+  background-image: url("/css/images/service_background.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: table;
+  text-align: center;
+  width: 100%;
+  padding: 50px 0;
+}
+
+.service h1 {
+  font-size: 30px;
+  line-height: 45px;
+  color: #676767;
+  font-weight: 300;
+  margin: 0 0 20px;
+}
+
+.text_center_white {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 20px 0;
+}
+
+.text_center_white .circle_center_wrapper .circle_center {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.text_center_white .circle_center_wrapper .circle_center .circle {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 2px solid #209ae7;
+  display: block;
+  margin: 0 auto;
+}
+
+.text_center_white .circle_center_wrapper .circle_center .circle .icon.research:before {
+  display: block;
+  content: url("/css/images/research_blue.png");
+}
+
+.text_center_white .circle_center_wrapper .circle_center .circle .icon.design:before {
+  display: block;
+  content: url("/css/images/design_blue.png");
+}
+
+.text_center_white .circle_center_wrapper .circle_center .circle .icon.development:before {
+  display: block;
+  content: url("/css/images/development_blue.png");
+}
+
+.text_center_white .circle_center_wrapper .circle_center .circle .icon.mobile:before {
+  display: block;
+  content: url("/css/images/mobile_app_blue.png");
+}
+
+.text_center_white .circle_center_wrapper .circle_center .circle .icon {
+  display: block;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  color: #209ae7;
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.text_center_white .circle_center_wrapper .circle_center .circle:hover {
+  background: #209ae7;
+}
+
+.text_center_white .circle_center_wrapper .circle_center .circle:hover .icon {
+  color: #fff;
+}
+
+.text_center_white .circle_center_wrapper .circle_center .circle:hover .icon.research:before {
+  content: url("/css/images/research_white.png");
+}
+
+.text_center_white .circle_center_wrapper .circle_center .circle:hover .icon.design:before {
+  display: block;
+  content: url("/css/images/design_white.png");
+}
+
+.text_center_white .circle_center_wrapper .circle_center .circle:hover .icon.development:before {
+  display: block;
+  content: url("/css/images/development_white.png");
+}
+
+.text_center_white .circle_center_wrapper .circle_center .circle:hover .icon.mobile:before {
+  display: block;
+  content: url("/css/images/mobile_white.png");
+}
+
+.text_center_white .circle_center_wrapper .circle_center p {
+  color: #676767;
+  font-size: 15px;
+  line-height: 25px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  margin-top: 30px;
+  text-align: center;
+  word-break: keep-all;
+}
+
+@media only screen and (min-width: 768px) {
+  .text_center_white {
+    overflow: hidden;
+    padding: 0;
+  }
+  .text_center_white .circle_center_wrapper .circle_center {
+    width: 50%;
+    float: left;
+    margin: 0;
+    padding: 20px;
+  }
+}
+
+@media only screen and (min-width: 1023px) {
+  .service h1 {
+    font-size: 40px;
+  }
+  .text_center_white .circle_center_wrapper {
+    width: 980px;
+    margin: 0 auto;
+  }
+  .text_center_white .circle_center_wrapper .circle_center {
+    width: 25%;
   }
 }
 /*# sourceMappingURL=style.css.map */

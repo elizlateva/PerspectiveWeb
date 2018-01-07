@@ -3,82 +3,46 @@
 \* ------------------------------------------------------------ */
 
 .intro {
-    width: 100%;
+    display: table;
+    max-height: calc(100% - 90px);
+    max-height: -webkit-calc(100% - 90px);
+    max-height: -moz-calc(100% - 90px);
+    text-align: center;
+    position: relative;
     height: 100%;
-    // max-height: calc(100% - 80px);
-    // max-height: -webkit-calc(100% - 80px);
-    // max-height: -moz-calc(100% - 80px);
+    width: 100%;
     background-image: url("/css/images/section_intro_background.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    // position: relative;
     & .text_center_inner {
-        height: 100%;
-        min-height: 750px;
-        width: 90%;
-        display: table;
-        margin: 0 auto;
+        position: inherit;
+        display: table-cell;
+        vertical-align: middle;
         text-align: center;
-        margin-right: 5%;
-        margin-left: 5%;
         & .text_center {
-            display: table-cell;
-            text-align: center;
-            vertical-align: middle;
-            // vertical-align: top;
-        }
-    }
-}
-
-.text_center {
-    & .logo {
-        display: block;
-        margin-top: -150px;
-        // margin-top: 150px;
-    }
-    & h1 {
-        // font-size: 40px;
-        font-size: 30px;
-        line-height: 45px;
-        color: $white;
-        font-weight: 300;
-        letter-spacing: 2px;
-        margin: 50px 0;
-        // margin: 100px 0;
-    }
-    & .btn_right_arrow {
-        display: inline-block;
-        color: $white;
-        padding: 15px 20px;
-        border: 1px solid $white;
-        font-weight: 300;
-        font-size: 15px;
-        // margin-bottom: 100px;
-        & .fa {
-            margin-left: 10px;
-        }
-    }
-}
-
-.scroll_down {
-    display: none;
-    & button {
-        color: white;
-        font-family: $font-family;
-        font-size: $font-size-15;
-        font-weight: 300;
-        &:after {
-            content: url("/css/images/scroll_down_arrow.png");
-            display: block;
-            margin-top: 10px;
+            margin: 0 auto;
+            width: 90%;
+            margin-right: 5%;
+            margin-left: 5%;
+            & .logo {
+                display: block;
+            }
+            & h1 {
+                font-size: 30px;
+                line-height: 45px;
+                color: $white;
+                font-weight: 300;
+                letter-spacing: 2px;
+                margin: 50px 0;
+            }
         }
     }
 }
 
 @media #{$desktop} {
-    .scroll_down {
-        display: block;
+    .text_center h1 {
+        font-size: 40px;
     }
 }

@@ -4,11 +4,11 @@
 
 .header {
     position: fixed;
-    top: 0;
     left: 0;
+    top: 0;
     width: 100%;
-    height: 70px;
     background: $white;
+    height: 91px;
     & .inner {
         padding: 20px;
         .logo_mobile {
@@ -28,8 +28,8 @@
 .phone {
     display: none;
     position: absolute;
-    top: 29px;
-    left: 10px;
+    top: 20px;
+    right: 170px;
     color: $white;
     line-height: 25px;
 }
@@ -51,10 +51,10 @@
 
 @media #{$desktop} {
     .header {
-        height: 100px;
-        position: sticky;
+        // position: sticky;
+        position: static;
+        top: auto;
         bottom: 0;
-        width: 100%;
         background: yellow;
         & .inner {
             padding: 0;
@@ -63,6 +63,26 @@
             }
             .nav_trigger {
                 display: none;
+            }
+        }
+        // &.fixed {
+        //     top: 0;
+        //     position: fixed;
+        // }
+    }
+    .phone {
+        display: block;
+    }
+    .lang {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        color: $white;
+        & a {
+            color: $white;
+            &:hover {
+                color: #b2b3b4;
+                font-weight: 300;
             }
         }
     }

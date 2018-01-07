@@ -1,0 +1,127 @@
+/* ------------------------------------------------------------ *\
+	Service section
+\* ------------------------------------------------------------ */
+
+.service {
+    background-image: url("/css/images/service_background.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: table;
+    text-align: center;
+    width: 100%;
+    padding: 50px 0;
+    & h1 {
+        font-size: 30px;
+        line-height: 45px;
+        color: $dark;
+        font-weight: 300;
+        margin: 0 0 20px;
+    }
+}
+
+.text_center_white {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 20px 0;
+    & .circle_center_wrapper {
+        & .circle_center {
+            width: 90%;
+            margin: 20px auto;
+            & .circle {
+                width: 140px;
+                height: 140px;
+                border-radius: 50%;
+                border: 2px solid $blue;
+                display: block;
+                margin: 0 auto;
+                & .icon.research:before {
+                    display: block;
+                    content: url('/css/images/research_blue.png');
+                }
+                & .icon.design:before {
+                    display: block;
+                    content: url('/css/images/design_blue.png');
+                }
+                & .icon.development:before {
+                    display: block;
+                    content: url('/css/images/development_blue.png');
+                }
+                & .icon.mobile:before {
+                    display: block;
+                    content: url('/css/images/mobile_app_blue.png');
+                }
+                & .icon {
+                    display: block;
+                    text-align: center;
+                    font-family: $font-family;
+                    color: $blue;
+                    font-size: $font-size-15;
+                    line-height: 25px;
+                    font-weight: 500;
+                    margin-top: 20px;
+                }
+                &:hover {
+                    background: $blue;
+                }
+                &:hover .icon {
+                    color: $white;
+                }
+                &:hover .icon.research:before {
+                    content: url('/css/images/research_white.png');
+                }
+                &:hover .icon.design:before {
+                    display: block;
+                    content: url('/css/images/design_white.png');
+                }
+                &:hover .icon.development:before {
+                    display: block;
+                    content: url('/css/images/development_white.png');
+                }
+                &:hover .icon.mobile:before {
+                    display: block;
+                    content: url('/css/images/mobile_white.png');
+                }
+            }
+            & p {
+                color: $dark;
+                font-size: $font-size-15;
+                line-height: 25px;
+                font-family: $font-family;
+                font-weight: 300;
+                margin-top: 30px;
+                text-align: center;
+                word-break: keep-all;
+            }
+        }
+    }
+}
+
+@media #{$tablet} {
+    .text_center_white {
+        overflow: hidden;
+        padding: 0;
+        & .circle_center_wrapper {
+            & .circle_center {
+                width: 50%;
+                float: left;
+                margin: 0;
+                padding: 20px;
+            }
+        }
+    }
+}
+
+@media #{$desktop} {
+    .service h1 {
+        font-size: 40px;
+    }
+    .text_center_white {
+        & .circle_center_wrapper {
+            width: 980px;
+            margin: 0 auto;
+            & .circle_center {
+                width: 25%;
+            }
+        }
+    }
+}

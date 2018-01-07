@@ -1,0 +1,43 @@
+/* ------------------------------------------------------------ *\
+	Scroll-down
+\* ------------------------------------------------------------ */
+
+.scroll_down.white {
+    // white//blue
+    display: none;
+    margin-top: 50px;
+    & .arrow {
+        color: $white;
+        font-family: $font-family;
+        font-size: $font-size-15;
+        font-weight: 300;
+        &:after {
+            content: url("/css/images/scroll_down_arrow.png");
+            display: block;
+            margin-top: 10px;
+        }
+    }
+}
+
+.scroll_down.blue {
+    display: none;
+    margin-top: 50px;
+    & .arrow {
+        color: $blue;
+        font-family: $font-family;
+        font-size: $font-size-15;
+        font-weight: 300;
+        &:after {
+            content: url("/css/images/scroll_down_arrow_blue.png");
+            display: block;
+            margin-top: 10px;
+        }
+    }
+}
+
+@media #{$desktop} {
+    .scroll_down.white,
+    .scroll_down.blue {
+        display: block;
+    }
+}
