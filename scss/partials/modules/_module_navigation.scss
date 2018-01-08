@@ -17,11 +17,55 @@
                     padding: 10px 0;
                     display: block;
                     text-transform: uppercase;
-                    &:hover {
-                        color: $blue;
-                        font-weight: 600;
-                        border-top: 2px solid $blue;
-                        border-bottom: 2px solid $blue;
+                    position: relative;
+                    &:before {
+                        position: absolute;
+                        background: $blue;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        content: '';
+                        opacity: 0;
+                        top: 0;
+                        -webkit-transform: translateY(-10px);
+                        -moz-transform: translateY(-10px);
+                        transform: translateY(-10px);
+                        transition: all 125ms ease-in-out 0s;
+                        -moz-transition: all 125ms ease-in-out 0s;
+                        -ms-transition: all 125ms ease-in-out 0s;
+                        -o-transition: all 125ms ease-in-out 0s;
+                        transition: all 125ms ease-in-out 0s;
+                    }
+                    &:after {
+                        background: $blue;
+                        position: absolute;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        content: '';
+                        opacity: 0;
+                        bottom: -15px;
+                        -webkit-transform: translateY(-10px);
+                        -moz-transform: translateY(-10px);
+                        transform: translateY(-10px);
+                        transition: all 125ms ease-in-out 0s;
+                        -moz-transition: all 125ms ease-in-out 0s;
+                        -ms-transition: all 125ms ease-in-out 0s;
+                        -o-transition: all 125ms ease-in-out 0s;
+                        transition: all 125ms ease-in-out 0s;
+                    }
+                    &:hover:after {
+                        opacity: 1;
+                        -webkit-transform: translateY(0);
+                        -moz-transform: translateY(0);
+                        transform: translateY(0);
+                    }
+                    &:hover:before {
+                        opacity: 1;
+                        top: 0;
+                        -webkit-transform: translateY(-10px);
+                        -moz-transform: translateY(-10px);
+                        transform: translateY(-10px);
                     }
                 }
             }
@@ -29,9 +73,9 @@
         & .logo_nav {
             display: none;
             & a {
-                &:hover {
-                    border-top: none;
-                    border-bottom: none;
+                &:hover:before,
+                &:hover:after {
+                    opacity: 0
                 }
             }
         }

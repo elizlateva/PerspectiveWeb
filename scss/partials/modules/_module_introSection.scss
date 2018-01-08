@@ -3,12 +3,11 @@
 \* ------------------------------------------------------------ */
 
 .intro {
-    display: table;
     max-height: calc(100% - 90px);
     max-height: -webkit-calc(100% - 90px);
     max-height: -moz-calc(100% - 90px);
-    text-align: center;
     position: relative;
+    display: table;
     height: 100%;
     width: 100%;
     background-image: url("/css/images/section_intro_background.png");
@@ -21,6 +20,7 @@
         display: table-cell;
         vertical-align: middle;
         text-align: center;
+        padding-top: 100px;
         & .text_center {
             margin: 0 auto;
             width: 90%;
@@ -31,9 +31,7 @@
             }
             & h1 {
                 font-size: 30px;
-                line-height: 45px;
                 color: $white;
-                font-weight: 300;
                 letter-spacing: 2px;
                 margin: 50px 0;
             }
@@ -42,7 +40,8 @@
 }
 
 @media #{$desktop} {
-    .text_center h1 {
-        font-size: 40px;
+    .intro .text_center_inner .text_center h1 {
+        font-size: 60px;
+        margin: 100px 0;
     }
 }

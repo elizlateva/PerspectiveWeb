@@ -9,6 +9,19 @@
     & h1 {
         font-size: 30px;
         color: $dark;
+        margin: 0 0 40px;
+        text-align: center;
+        position: relative;
+        display: inline-block;
+        &:hover:after {
+            width: 40%;
+            left: 33%;
+            content: "";
+            position: absolute;
+            height: 1px;
+            bottom: -15px;
+            border-bottom: 2px solid $blue;
+        }
     }
 }
 
@@ -31,9 +44,11 @@
     }
     & .swiper-button-next {
         background: url("/css/images/right_arrow.png") no-repeat;
+        z-index: 1;
     }
     & .swiper-button-prev {
         background: url("/css/images/left_arrow.png") no-repeat;
+        z-index: 1;
     }
 }
 

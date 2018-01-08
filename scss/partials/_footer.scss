@@ -6,15 +6,17 @@
     background: #252c34;
     padding: 20px 0;
     & .footer_center {
+        padding: 0 20px;
         & p {
             color: #828588;
             text-align: center;
         }
         & .social_icons {
             text-align: center;
+            padding-top: 20px;
             & li {
                 display: inline-block;
-                margin: 0 15px;
+                margin: 0 7px;
             }
         }
     }
@@ -26,13 +28,15 @@
         & .footer_center {
             width: 980px;
             margin: 0 auto;
+            padding: 0;
+            overflow: hidden;
             & p {
-                float: left;
-                clear: left;
+                display: inline-block;
             }
             & .social_icons {
                 vertical-align: middle;
                 float: right;
+                padding-top: 0;
             }
         }
     }

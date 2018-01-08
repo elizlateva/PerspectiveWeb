@@ -2,11 +2,7 @@
 	Project section
 \* ------------------------------------------------------------ */
 
-.project {
-    // background-size: cover, cover;
-    // background-image: url("/css/images/project_section_background.png"), url("/css/images/project_section_background-up.png");
-    // background-position: 10px 10px, 100px top center;
-    // background-repeat: no-repeat, no-repeat;
+.projects {
     background: url("/css/images/project_background.png") no-repeat;
     background-size: cover;
     text-align: center;
@@ -15,18 +11,33 @@
     & h1 {
         font-size: 30px;
         color: $white;
+        margin: 0 0 40px;
+        text-align: center;
+        position: relative;
+        display: inline-block;
+        &:hover:after {
+            width: 40%;
+            left: 33%;
+            content: "";
+            position: absolute;
+            height: 1px;
+            bottom: -15px;
+            border-bottom: 2px solid $blue;
+        }
     }
 }
 
 .gallery {
     display: block;
     padding: 0 10px;
+    margin: 50px 0;
     & .gallery_project {
         width: 100%;
         display: block;
         overflow: hidden;
         margin-bottom: 10px;
         position: relative;
+        border: 2px solid $gray;
         & img {
             display: block;
             width: 100%;
@@ -71,29 +82,23 @@
 @media #{$tablet} {
     .gallery {
         padding: 0;
-        margin: 50px 0;
+        overflow: hidden;
         & .gallery_project {
             width: 48%;
             float: left;
             margin: 0 0 10px 10px;
-            &:after {
-                display: block;
-                clear: both;
-                content: "";
-            }
-        }
-        &:after {
-            display: block;
-            clear: both;
-            content: "";
         }
     }
 }
 
 @media #{$desktop} {
+    .projects h1 {
+        font-size: 40px;
+    }
     .gallery {
         & .gallery_project {
             width: 32.4%;
+            border: none;
         }
     }
     .gallery_project:hover .gallery_overlay {
