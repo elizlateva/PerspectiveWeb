@@ -1,0 +1,44 @@
+/* ------------------------------------------------------------ *\
+	Clients section
+\* ------------------------------------------------------------ */
+
+.clients {
+    background: $white;
+    text-align: center;
+    padding: 40px 0;
+    & h1 {
+        font-size: 30px;
+        color: $dark;
+    }
+}
+
+.slider {
+    position: relative;
+    margin: 30px auto;
+    & .swiper-container {
+        width: 80%;
+        & .swiper-slide {
+            & .swiper-slide-image-container {
+                text-align: center;
+                & .logo_aeropark {
+                    padding-top: 15px;
+                }
+                & .logo_parking_valet {
+                    padding-top: 17px;
+                }
+            }
+        }
+    }
+    & .swiper-button-next {
+        background: url("/css/images/right_arrow.png") no-repeat;
+    }
+    & .swiper-button-prev {
+        background: url("/css/images/left_arrow.png") no-repeat;
+    }
+}
+
+@media #{$desktop} {
+    .slider {
+        width: 980px;
+    }
+}

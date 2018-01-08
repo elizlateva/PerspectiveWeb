@@ -190,6 +190,37 @@ img {
 h1 {
   font-family: "Open Sans", sans-serif;
   text-align: center;
+  position: relative;
+  display: inline-block;
+  font-size: 40px;
+  line-height: 45px;
+  font-weight: 300;
+  margin: 0 0 40px;
+}
+
+h1:hover:after {
+  width: 40%;
+  left: 33%;
+  content: "";
+  position: absolute;
+  height: 1px;
+  bottom: -15px;
+  border-bottom: 2px solid #209ae7;
+}
+
+h2 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 40px;
+  line-height: 45px;
+  font-weight: 300;
+  color: #fff;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 400;
 }
 
 /* ------------------------------------------------------------ *	Helpers
@@ -209,7 +240,7 @@ h1 {
   top: 0;
   width: 100%;
   background: #fff;
-  height: 91px;
+  z-index: 2;
 }
 
 .header .inner {
@@ -230,7 +261,7 @@ h1 {
 .phone {
   display: none;
   position: absolute;
-  top: 20px;
+  top: 30px;
   right: 170px;
   color: #fff;
   line-height: 25px;
@@ -255,10 +286,11 @@ h1 {
 
 @media only screen and (min-width: 1023px) {
   .header {
+    height: 91px;
     position: static;
     top: auto;
     bottom: 0;
-    background: yellow;
+    background: #fff;
   }
   .header .inner {
     padding: 0;
@@ -274,7 +306,7 @@ h1 {
   }
   .lang {
     position: fixed;
-    top: 20px;
+    top: 30px;
     right: 20px;
     color: #fff;
   }
@@ -493,7 +525,7 @@ h1 {
 .scroll_down.white .arrow:after {
   content: url("/css/images/scroll_down_arrow.png");
   display: block;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .scroll_down.blue {
@@ -514,6 +546,28 @@ h1 {
   margin-top: 10px;
 }
 
+.bounce:after {
+  -moz-animation: bounce 5s infinite;
+  -webkit-animation: bounce 5s infinite;
+  animation: bounce 5s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
 @media only screen and (min-width: 1023px) {
   .scroll_down.white,
   .scroll_down.blue {
@@ -531,15 +585,13 @@ h1 {
   display: table;
   text-align: center;
   width: 100%;
-  padding: 50px 0;
+  padding: 40px 0;
+  margin-top: -91px;
 }
 
 .service h1 {
   font-size: 30px;
-  line-height: 45px;
   color: #676767;
-  font-weight: 300;
-  margin: 0 0 20px;
 }
 
 .text_center_white {
@@ -633,7 +685,6 @@ h1 {
 @media only screen and (min-width: 768px) {
   .text_center_white {
     overflow: hidden;
-    padding: 0;
   }
   .text_center_white .circle_center_wrapper .circle_center {
     width: 50%;
@@ -644,6 +695,9 @@ h1 {
 }
 
 @media only screen and (min-width: 1023px) {
+  .service {
+    margin-top: auto;
+  }
   .service h1 {
     font-size: 40px;
   }
@@ -653,6 +707,234 @@ h1 {
   }
   .text_center_white .circle_center_wrapper .circle_center {
     width: 25%;
+  }
+}
+
+/* ------------------------------------------------------------ *	Project section
+\* ------------------------------------------------------------ */
+.project {
+  background: url("/css/images/project_background.png") no-repeat;
+  background-size: cover;
+  text-align: center;
+  width: 100%;
+  padding: 40px 0;
+}
+
+.project h1 {
+  font-size: 30px;
+  color: #fff;
+}
+
+.gallery {
+  display: block;
+  padding: 0 10px;
+}
+
+.gallery .gallery_project {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.gallery .gallery_project img {
+  display: block;
+  width: 100%;
+}
+
+.gallery_overlay {
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.gallery_overlay .title {
+  color: #fff;
+  font-size: 25px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  display: block;
+  letter-spacing: 0.5px;
+  margin-top: 20%;
+}
+
+.gallery_overlay .text {
+  color: #209ae7;
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  display: block;
+  margin-top: 20%;
+}
+
+@media only screen and (min-width: 768px) {
+  .gallery {
+    padding: 0;
+    margin: 50px 0;
+  }
+  .gallery .gallery_project {
+    width: 48%;
+    float: left;
+    margin: 0 0 10px 10px;
+  }
+  .gallery .gallery_project:after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+  .gallery:after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+
+@media only screen and (min-width: 1023px) {
+  .gallery .gallery_project {
+    width: 32.4%;
+  }
+  .gallery_project:hover .gallery_overlay {
+    opacity: 1;
+  }
+}
+
+/* ------------------------------------------------------------ *	Clients section
+\* ------------------------------------------------------------ */
+.clients {
+  background: #fff;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.clients h1 {
+  font-size: 30px;
+  color: #676767;
+}
+
+.slider {
+  position: relative;
+  margin: 30px auto;
+}
+
+.slider .swiper-container {
+  width: 80%;
+}
+
+.slider .swiper-container .swiper-slide .swiper-slide-image-container {
+  text-align: center;
+}
+
+.slider .swiper-container .swiper-slide .swiper-slide-image-container .logo_aeropark {
+  padding-top: 15px;
+}
+
+.slider .swiper-container .swiper-slide .swiper-slide-image-container .logo_parking_valet {
+  padding-top: 17px;
+}
+
+.slider .swiper-button-next {
+  background: url("/css/images/right_arrow.png") no-repeat;
+}
+
+.slider .swiper-button-prev {
+  background: url("/css/images/left_arrow.png") no-repeat;
+}
+
+@media only screen and (min-width: 1023px) {
+  .slider {
+    width: 980px;
+  }
+}
+
+/* ------------------------------------------------------------ *	Contacts section
+\* ------------------------------------------------------------ */
+.contacts {
+  background: #17394f;
+  text-align: center;
+}
+
+.contacts .contacts_center h2 {
+  display: block;
+  padding: 50px 0;
+  font-size: 30px;
+}
+
+.contacts .contacts_center .btn_right_arrow.white {
+  margin-bottom: 50px;
+}
+
+.contacts .contacts_center .btn_right_arrow.white:hover {
+  color: #17394f;
+}
+
+@media only screen and (min-width: 1023px) {
+  .contacts {
+    text-align: right;
+  }
+  .contacts .contacts_center {
+    width: 980px;
+    margin: 0 auto;
+    padding: 50px 0;
+  }
+  .contacts .contacts_center h2 {
+    font-size: 40px;
+    padding: 0;
+    float: left;
+    clear: left;
+  }
+  .contacts .contacts_center .btn_right_arrow.white {
+    margin-bottom: 0;
+  }
+}
+
+/* ------------------------------------------------------------ *	Footer
+\* ------------------------------------------------------------ */
+.footer {
+  background: #252c34;
+  padding: 20px 0;
+}
+
+.footer .footer_center p {
+  color: #828588;
+  text-align: center;
+}
+
+.footer .footer_center .social_icons {
+  text-align: center;
+}
+
+.footer .footer_center .social_icons li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+@media only screen and (min-width: 1023px) {
+  .footer {
+    overflow: hidden;
+  }
+  .footer .footer_center {
+    width: 980px;
+    margin: 0 auto;
+  }
+  .footer .footer_center p {
+    float: left;
+    clear: left;
+  }
+  .footer .footer_center .social_icons {
+    vertical-align: middle;
+    float: right;
   }
 }
 /*# sourceMappingURL=style.css.map */

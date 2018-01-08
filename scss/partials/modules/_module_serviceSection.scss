@@ -10,13 +10,11 @@
     display: table;
     text-align: center;
     width: 100%;
-    padding: 50px 0;
+    padding: 40px 0;
+    margin-top: -91px;
     & h1 {
         font-size: 30px;
-        line-height: 45px;
         color: $dark;
-        font-weight: 300;
-        margin: 0 0 20px;
     }
 }
 
@@ -99,7 +97,6 @@
 @media #{$tablet} {
     .text_center_white {
         overflow: hidden;
-        padding: 0;
         & .circle_center_wrapper {
             & .circle_center {
                 width: 50%;
@@ -112,8 +109,11 @@
 }
 
 @media #{$desktop} {
-    .service h1 {
-        font-size: 40px;
+    .service {
+        margin-top: auto;
+        & h1 {
+            font-size: 40px;
+        }
     }
     .text_center_white {
         & .circle_center_wrapper {

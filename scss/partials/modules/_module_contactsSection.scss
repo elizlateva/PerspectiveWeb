@@ -1,0 +1,41 @@
+/* ------------------------------------------------------------ *\
+	Contacts section
+\* ------------------------------------------------------------ */
+
+.contacts {
+    background: #17394f;
+    text-align: center;
+    & .contacts_center {
+        & h2 {
+            display: block;
+            padding: 50px 0;
+            font-size: 30px;
+        }
+        & .btn_right_arrow.white {
+            margin-bottom: 50px;
+            &:hover {
+                color: #17394f;
+            }
+        }
+    }
+}
+
+@media #{$desktop} {
+    .contacts {
+        text-align: right;
+        & .contacts_center {
+            width: 980px;
+            margin: 0 auto;
+            padding: 50px 0;
+            & h2 {
+                font-size: 40px;
+                padding: 0;
+                float: left;
+                clear: left;
+            }
+            & .btn_right_arrow.white {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

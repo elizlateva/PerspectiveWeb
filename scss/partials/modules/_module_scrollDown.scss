@@ -3,7 +3,6 @@
 \* ------------------------------------------------------------ */
 
 .scroll_down.white {
-    // white//blue
     display: none;
     margin-top: 50px;
     & .arrow {
@@ -14,7 +13,7 @@
         &:after {
             content: url("/css/images/scroll_down_arrow.png");
             display: block;
-            margin-top: 10px;
+            margin-top: 20px;
         }
     }
 }
@@ -32,6 +31,28 @@
             display: block;
             margin-top: 10px;
         }
+    }
+}
+
+.bounce:after {
+    -moz-animation: bounce 5s infinite;
+    -webkit-animation: bounce 5s infinite;
+    animation: bounce 5s infinite;
+}
+
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
     }
 }
 

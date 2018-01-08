@@ -8,7 +8,8 @@
     top: 0;
     width: 100%;
     background: $white;
-    height: 91px;
+    // height: 91px;
+    z-index: 2;
     & .inner {
         padding: 20px;
         .logo_mobile {
@@ -28,7 +29,7 @@
 .phone {
     display: none;
     position: absolute;
-    top: 20px;
+    top: 30px;
     right: 170px;
     color: $white;
     line-height: 25px;
@@ -51,11 +52,11 @@
 
 @media #{$desktop} {
     .header {
-        // position: sticky;
+        height: 91px;
         position: static;
         top: auto;
         bottom: 0;
-        background: yellow;
+        background: $white;
         & .inner {
             padding: 0;
             .logo_mobile {
@@ -65,17 +66,13 @@
                 display: none;
             }
         }
-        // &.fixed {
-        //     top: 0;
-        //     position: fixed;
-        // }
     }
     .phone {
         display: block;
     }
     .lang {
         position: fixed;
-        top: 20px;
+        top: 30px;
         right: 20px;
         color: $white;
         & a {

@@ -1,0 +1,102 @@
+/* ------------------------------------------------------------ *\
+	Project section
+\* ------------------------------------------------------------ */
+
+.project {
+    // background-size: cover, cover;
+    // background-image: url("/css/images/project_section_background.png"), url("/css/images/project_section_background-up.png");
+    // background-position: 10px 10px, 100px top center;
+    // background-repeat: no-repeat, no-repeat;
+    background: url("/css/images/project_background.png") no-repeat;
+    background-size: cover;
+    text-align: center;
+    width: 100%;
+    padding: 40px 0;
+    & h1 {
+        font-size: 30px;
+        color: $white;
+    }
+}
+
+.gallery {
+    display: block;
+    padding: 0 10px;
+    & .gallery_project {
+        width: 100%;
+        display: block;
+        overflow: hidden;
+        margin-bottom: 10px;
+        position: relative;
+        & img {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+.gallery_overlay {
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+    & .title {
+        color: $white;
+        font-size: 25px;
+        font-family: $font-family;
+        font-weight: 300;
+        text-align: center;
+        display: block;
+        letter-spacing: 0.5px;
+        margin-top: 20%;
+    }
+    & .text {
+        color: $blue;
+        font-size: 18px;
+        font-family: $font-family;
+        font-weight: 300;
+        text-align: center;
+        display: block;
+        margin-top: 20%;
+    }
+}
+
+@media #{$tablet} {
+    .gallery {
+        padding: 0;
+        margin: 50px 0;
+        & .gallery_project {
+            width: 48%;
+            float: left;
+            margin: 0 0 10px 10px;
+            &:after {
+                display: block;
+                clear: both;
+                content: "";
+            }
+        }
+        &:after {
+            display: block;
+            clear: both;
+            content: "";
+        }
+    }
+}
+
+@media #{$desktop} {
+    .gallery {
+        & .gallery_project {
+            width: 32.4%;
+        }
+    }
+    .gallery_project:hover .gallery_overlay {
+        opacity: 1;
+    }
+}

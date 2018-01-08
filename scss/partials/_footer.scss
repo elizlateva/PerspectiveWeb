@@ -1,0 +1,39 @@
+/* ------------------------------------------------------------ *\
+	Footer
+\* ------------------------------------------------------------ */
+
+.footer {
+    background: #252c34;
+    padding: 20px 0;
+    & .footer_center {
+        & p {
+            color: #828588;
+            text-align: center;
+        }
+        & .social_icons {
+            text-align: center;
+            & li {
+                display: inline-block;
+                margin: 0 15px;
+            }
+        }
+    }
+}
+
+@media #{$desktop} {
+    .footer {
+        overflow: hidden;
+        & .footer_center {
+            width: 980px;
+            margin: 0 auto;
+            & p {
+                float: left;
+                clear: left;
+            }
+            & .social_icons {
+                vertical-align: middle;
+                float: right;
+            }
+        }
+    }
+}
