@@ -817,7 +817,7 @@ p {
 
 .gallery {
   display: block;
-  padding: 0 10px;
+  padding: 0 20px;
   margin: 0 0 50px;
 }
 
@@ -825,7 +825,7 @@ p {
   width: 100%;
   display: block;
   overflow: hidden;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   position: relative;
   border: 2px solid #b9b9b9;
 }
