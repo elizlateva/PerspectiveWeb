@@ -376,6 +376,7 @@ p {
   width: 90%;
   margin-right: 5%;
   margin-left: 5%;
+  margin-bottom: 20px;
 }
 
 .text_center_inner .text_center .logo {
@@ -783,7 +784,6 @@ p {
 @media only screen and (min-width: 1023px) {
   .services {
     margin-top: auto;
-    padding: 20px 0;
   }
   .services h1 {
     font-size: 40px;
