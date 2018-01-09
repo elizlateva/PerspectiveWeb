@@ -6,23 +6,6 @@
     background: $white;
     text-align: center;
     padding: 40px 0;
-    & h1 {
-        font-size: 30px;
-        color: $dark;
-        margin: 0 0 40px;
-        text-align: center;
-        position: relative;
-        display: inline-block;
-        &:hover:after {
-            width: 40%;
-            left: 33%;
-            content: "";
-            position: absolute;
-            height: 1px;
-            bottom: -15px;
-            border-bottom: 2px solid $blue;
-        }
-    }
 }
 
 .slider {
@@ -30,15 +13,13 @@
     margin: 30px auto;
     & .swiper-container {
         width: 80%;
-        & .swiper-slide {
-            & .swiper-slide-image-container {
-                text-align: center;
-                & .logo_aeropark {
-                    padding-top: 15px;
-                }
-                & .logo_parking_valet {
-                    padding-top: 17px;
-                }
+        & .swiper-slide .swiper-slide-image-container {
+            text-align: center;
+            & .logo_aeropark {
+                padding-top: 15px;
+            }
+            & .logo_parking_valet {
+                padding-top: 17px;
             }
         }
     }
@@ -53,6 +34,9 @@
 }
 
 @media #{$desktop} {
+    .clients h1 {
+        font-size: $font-size-40;
+    }
     .slider {
         width: 980px;
     }

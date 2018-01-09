@@ -15,7 +15,9 @@ $blue:#209ae7;
 
 $font-family: "Open Sans",
 sans-serif;
-$font-size-15: 15px;
+$font-size-15: 15px; // p  font-size on desktop
+$font-size-30: 30px; // h1 font-size on mobile
+$font-size-40: 40px; // h1 font-size on desktop
 
 /*  Links  */
 
@@ -23,7 +25,5 @@ $color-link: inherit;
 
 /*  @media */
 
-$smartphone: "only screen and (min-width : 480px)";
 $tablet: "only screen and (min-width : 768px)";
 $desktop: "only screen and (min-width : 1023px)";
-$hd_desktop:"only screen and (min-width: 1366px)";
