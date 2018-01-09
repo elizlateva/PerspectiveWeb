@@ -250,6 +250,7 @@ p {
   right: 170px;
   color: #fff;
   line-height: 25px;
+  font-weight: 400;
 }
 
 .lang_mobile {
@@ -312,7 +313,6 @@ p {
   }
   .lang a:hover {
     color: #b2b3b4;
-    font-weight: 300;
   }
   .is-sticky .lang {
     color: #b2b3b4;
@@ -322,7 +322,6 @@ p {
   }
   .is-sticky .lang a:hover {
     color: #209ae7;
-    font-weight: 300;
   }
 }
 
@@ -1010,6 +1009,8 @@ p {
 .footer .footer_center p {
   color: #828588;
   text-align: center;
+  line-height: 25px;
+  font-size: 13px;
 }
 
 .footer .footer_center .social_icons {
@@ -1020,6 +1021,20 @@ p {
 .footer .footer_center .social_icons li {
   display: inline-block;
   margin: 0 7px;
+}
+
+.footer .footer_center .social_icons li .fa {
+  font-family: FontAwesome;
+  font-size: 30px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 35px;
+  color: #546374;
+}
+
+.footer .footer_center .social_icons li .fa:hover {
+  color: #fff;
 }
 
 @media only screen and (min-width: 1023px) {
@@ -1034,6 +1049,8 @@ p {
   }
   .footer .footer_center p {
     display: inline-block;
+    font-size: 15px;
+    line-height: 30px;
   }
   .footer .footer_center .social_icons {
     vertical-align: middle;

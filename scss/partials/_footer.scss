@@ -10,6 +10,8 @@
         & p {
             color: #828588;
             text-align: center;
+            line-height: 25px;
+            font-size: 13px;
         }
         & .social_icons {
             text-align: center;
@@ -17,6 +19,18 @@
             & li {
                 display: inline-block;
                 margin: 0 7px;
+                & .fa {
+                    font-family: FontAwesome;
+                    font-size: 30px;
+                    font-style: normal;
+                    font-variant: normal;
+                    font-weight: 400;
+                    line-height: 35px;
+                    color: #546374;
+                    &:hover {
+                        color: $white;
+                    }
+                }
             }
         }
     }
@@ -32,6 +46,8 @@
             overflow: hidden;
             & p {
                 display: inline-block;
+                font-size: $font-size-15;
+                line-height: 30px;
             }
             & .social_icons {
                 vertical-align: middle;
