@@ -18,8 +18,7 @@
     padding: 20px 0;
     & .circle_center_wrapper {
         & .circle_center {
-            width: 90%;
-            margin: 20px auto;
+            padding: 20px;
             & .circle {
                 width: 140px;
                 height: 140px;
@@ -95,7 +94,7 @@
                 width: 50%;
                 float: left;
                 margin: 0;
-                padding: 20px;
+                padding: 30px;
             }
         }
     }
@@ -104,6 +103,7 @@
 @media #{$desktop} {
     .services {
         margin-top: auto;
+        padding: 20px 0;
         & h1 {
             font-size: $font-size-40;
         }
@@ -114,6 +114,7 @@
             margin: 0 auto;
             & .circle_center {
                 width: 25%;
+                padding: 10px;
                 & p {
                     font-size: $font-size-15;
                 }

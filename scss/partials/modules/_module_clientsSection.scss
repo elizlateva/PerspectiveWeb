@@ -26,10 +26,12 @@
     & .swiper-button-next {
         background: url("/css/images/right_arrow.png") no-repeat;
         z-index: 1;
+        margin-top: -18px;
     }
     & .swiper-button-prev {
         background: url("/css/images/left_arrow.png") no-repeat;
         z-index: 1;
+        margin-top: -18px;
     }
 }
 

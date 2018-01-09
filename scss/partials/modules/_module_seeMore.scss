@@ -17,7 +17,8 @@
 .btn_right_arrow.white {
     color: $white;
     border: 1px solid $white;
-    &:hover {
+    &:hover,
+    &:active {
         color: $blue;
         font-weight: 600;
     }
@@ -43,7 +44,8 @@
     color: $blue;
     border: 1px solid $blue;
     margin-top: 50px;
-    &:hover {
+    &:hover,
+    &:active {
         color: $white;
         font-weight: 600;
     }

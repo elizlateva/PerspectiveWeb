@@ -16,7 +16,7 @@
 .gallery {
     display: block;
     padding: 0 10px;
-    margin: 50px 0;
+    margin: 0 0 50px;
     & .gallery_project {
         width: 100%;
         display: block;
@@ -84,6 +84,7 @@
         font-size: $font-size-40;
     }
     .gallery {
+        margin-top: 25px;
         & .gallery_project {
             width: 32%;
             border: none;

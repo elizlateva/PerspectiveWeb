@@ -10,12 +10,14 @@
         & h2 {
             display: block;
             padding: 50px 0;
-            font-size: 31px;
+            font-size: 28px;
+            line-height: 38px;
             color: $white;
         }
         & .btn_right_arrow.white {
             margin-bottom: 50px;
-            &:hover {
+            &:hover,
+            &:active {
                 color: #17394f;
             }
         }
@@ -31,6 +33,7 @@
             padding: 50px 0;
             & h2 {
                 font-size: 35x;
+                line-height: 45px;
                 padding: 0;
                 float: left;
                 clear: left;
