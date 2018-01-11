@@ -13,22 +13,23 @@
             line-height: 25px;
             font-size: 13px;
         }
-        & .social_icons {
-            text-align: center;
-            padding-top: 20px;
-            & li {
-                display: inline-block;
-                margin: 0 7px;
-                & .fa {
-                    font-family: FontAwesome;
-                    font-size: 30px;
-                    font-weight: 400;
-                    line-height: 35px;
-                    color: #546374;
-                    &:hover {
-                        color: $white;
-                    }
-                }
+    }
+}
+
+.social_icons {
+    text-align: center;
+    padding-bottom: 20px;
+    & li {
+        display: inline-block;
+        margin: 0 7px;
+        & .fa {
+            font-family: FontAwesome;
+            font-size: 30px;
+            font-weight: 400;
+            line-height: 35px;
+            color: #546374;
+            &:hover {
+                color: $white;
             }
         }
     }
@@ -45,10 +46,10 @@
                 font-size: $font-size-15;
                 line-height: 30px;
             }
-            & .social_icons {
-                float: right;
-                padding-top: 0;
-            }
         }
+    }
+    .footer .footer_center .social_icons {
+        float: right;
+        padding-bottom: 0;
     }
 }

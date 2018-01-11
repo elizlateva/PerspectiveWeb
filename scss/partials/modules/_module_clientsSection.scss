@@ -13,26 +13,385 @@
     margin: 30px auto;
     & .swiper-container {
         width: 80%;
-        & .swiper-slide .swiper-slide-image-container {
-            text-align: center;
-            & .logo_aeropark {
-                padding-top: 15px;
-            }
-            & .logo_parking_valet {
-                padding-top: 17px;
-            }
-        }
     }
-    & .swiper-button-next {
-        background: url("/css/images/right_arrow.png") no-repeat;
-        z-index: 1;
-        margin-top: -18px;
+}
+
+//Not work in IE11
+.swiper-slide img {
+    -webkit-filter: grayscale(100%); // Ch 23+, Saf 6.0+, BB 10.0+ 
+    filter: grayscale(100%); // FF 35+ 
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    ;
+    &:hover {
+        transition: filter .5s ease-in-out;
+        -webkit-filter: grayscale(0%); //Ch 23+, Saf 6.0+, BB 10.0+ 
+        filter: grayscale(0%); // FF 35+
     }
-    & .swiper-button-prev {
-        background: url("/css/images/left_arrow.png") no-repeat;
-        z-index: 1;
-        margin-top: -18px;
-    }
+}
+
+// .swiper-slide .logo_airlia {
+//     background-image: url("/css/images/logo_airlia.png");
+//     display: block;
+//     width: 100%;
+//     height: 54px;
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//     background-size: contain;
+//     &:hover {
+//         background-image: url("/css/images/logo_airlia_hover.png");
+//     }
+// }
+// .swiper-slide .logo_aeropark {
+//     background-image: url("/css/images/logo_aeropark.png");
+//     display: block;
+//     width: 100%;
+//     height: 40px;
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//     background-size: contain;
+//     margin-top: 20px;
+//     &:hover {
+//         background-image: url("/css/images/logo_aeropark_hover.png");
+//     }
+// }
+// .swiper-slide .logo_parking_valet {
+//     background-image: url("/css/images/logo_parking_valet.png");
+//     display: block;
+//     width: 100%;
+//     height: 35px;
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//     background-size: contain;
+//     margin-top: 20px;
+//     ;
+//     &:hover {
+//         background-image: url("/css/images/logo_parking_valet_hover.png");
+//     }
+// }
+// .swiper-slide .logo_GVA {
+//     background-image: url("/css/images/logo_GVA.png");
+//     display: block;
+//     width: 100%;
+//     height: 67px;
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//     background-size: contain;
+//     &:hover {
+//         background-image: url("/css/images/logo_GVA_hover.png");
+//     }
+// }
+// .swiper-slide .logo_hydropro {
+//     background-image: url("/css/images/logo_hydropro.png");
+//     display: block;
+//     width: 100%;
+//     height: 62px;
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//     background-size: contain;
+//     &:hover {
+//         background-image: url("/css/images/logo_hydropro_hover.png");
+//     }
+// }
+// .swiper-slide .logo_aviata-cruises {
+//     background-image: url("/css/images/logo_aviata_cruises.png");
+//     display: block;
+//     height: 67px;
+//     width: 100%;
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//     background-size: contain;
+//     &:hover {
+//         background-image: url("/css/images/logo_aviata_cruises_hover.png");
+//     }
+// }
+// .swiper-slide .logo_easpd {
+//     background-image: url("/css/images/logo_easpd.png");
+//     display: block;
+//     height: 70px;
+//     width: 100%;
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//     background-size: contain;
+//     &:hover {
+//         background-image: url("/css/images/logo_easpd_hover.png");
+//     }
+// }
+// .swiper-slide .logo_bigla {
+//     background-image: url("/css/images/logo_bigla.png");
+//     display: block;
+//     height: 65px;
+//     width: 100%;
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//     background-size: contain;
+//     &:hover {
+//         background-image: url("/css/images/logo_bigla_hover.png");
+//     }
+// }
+// .swiper-slide .logo_ambra {
+//     background-image: url("/css/images/logo_ambra.png");
+//     display: block;
+//     height: 70px;
+//     width: 100%;
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//     background-size: contain;
+//     &:hover {
+//         background-image: url("/css/images/logo_ambra.png"); // no color change on hover - white logo
+//     }
+// }
+// .swiper-slide .logo_bluebee {
+//     background-image: url("/css/images/logo_bluebee.png");
+//     display: block;
+//     height: 70px;
+//     width: 100%;
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//     background-size: contain;
+//     &:hover {
+//         background-image: url("/css/images/logo_bluebee_hover.png");
+//     }
+// }
+// .swiper-slide .logo_bulins {
+//     background-image: url("/css/images/logo_bulinslogo.png");
+//     display: block;
+//     height: 70px;
+//     width: 100%;
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//     background-size: contain;
+//     &:hover {
+//         background-image: url("/css/images/logo_bulins_hover.png");
+//     }
+// }
+// .swiper-slide .logo_cocologo {
+//     background-image: url("/css/images/logo_cocologo.png");
+//     display: block;
+//     height: 70px;
+//     width: 100%;
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//     background-size: contain;
+//     &:hover {
+//         background-image: url("/css/images/logo_cocologo_hover.png");
+//     }
+// }
+// .swiper-slide .logo_disability {
+//     background-image: url("/css/images/logo_disability_leaders.png");
+//     display: block;
+//     height: 70px;
+//     width: 100%;
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//     background-size: contain;
+//     &:hover {
+//         background-image: url("/css/images/logo_disability leaders_hover.png");
+//     }
+// }
+// .swiper-slide .logo_elite_estate {
+//     background-image: url("/css/images/logo_elite_estate.png");
+//     display: block;
+//     height: 70px;
+//     width: 100%;
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//     background-size: contain;
+//     &:hover {
+//         background-image: url("/css/images/logo_elite_estate.png"); // no color change on hover - white logo
+//     }
+// }
+// .swiper-slide .logo_hambolt {
+//     background-image: url("/css/images/logo_hambolt.png");
+//     display: block;
+//     height: 128px;
+//     width: 100%;
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//     background-size: contain;
+//     &:hover {
+//         background-image: url("/css/images/logo_hambolt.png"); // no color change on hover - white logo
+//     }
+// }
+// .swiper-slide .logo_ihc_ships {
+//     background-image: url("/css/images/logo_ihc_ships.png");
+//     display: block;
+//     height: 34px;
+//     width: 100%;
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//     background-size: contain;
+//     &:hover {
+//         background-image: url("/css/images/logo_ihc_ships.png"); // no color change on hover - white logo
+//     }
+// }
+// .swiper-slide .logo_julian_kostov {
+//     background-image: url("/css/images/logo_julian_kostov.png");
+//     display: block;
+//     height: 93px;
+//     width: 100%;
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//     background-size: contain;
+//     &:hover {
+//         background-image: url("/css/images/logo_julian_kostov.png"); // no color change on hover - white logo
+//     }
+// }
+// .swiper-slide .logo_dani {
+//     background-image: url("/css/images/logo_dani.png");
+//     display: block;
+//     height: 128px;
+//     width: 100%;
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//     background-size: contain;
+//     &:hover {
+//         background-image: url("/css/images/logo_dani_96.png");
+//     }
+// }
+// .swiper-slide .logo_motobul {
+//     background-image: url("/css/images/logo_motobul.png");
+//     display: block;
+//     height: 128px;
+//     width: 100%;
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//     background-size: contain;
+//     &:hover {
+//         background-image: url("/css/images/logo_motobul_hover.png");
+//     }
+// }
+// .swiper-slide .logo_tobeproper {
+//     background-image: url("/css/images/logo_tobeproper.png");
+//     display: block;
+//     height: 90px;
+//     width: 100%;
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//     background-size: contain;
+//     &:hover {
+//         background-image: url("/css/images/logo_tobeproper_hover.png");
+//     }
+// }
+// .swiper-slide .logo_brevis {
+//     background-image: url("/css/images/logo_brevis.png");
+//     display: block;
+//     height: 50px;
+//     width: 100%;
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//     background-size: contain;
+//     &:hover {
+//         background-image: url("/css/images/logo_brevis_hover.png");
+//     }
+// }
+// .swiper-slide .logo_hydroweb {
+//     background-image: url("/css/images/Logo_HydroWebNew.png");
+//     display: block;
+//     height: 113px;
+//     width: 100%;
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//     background-size: contain;
+//     &:hover {
+//         background-image: url("/css/images/Logo_HydroWebNew_hover.png");
+//     }
+// }
+// .swiper-slide .logo_mashinite {
+//     background-image: url("/css/images/logo_mashinitelogoRE.png");
+//     display: block;
+//     height: 37px;
+//     width: 100%;
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//     background-size: contain;
+//     &:hover {
+//         background-image: url("/css/images/mashinitelogoRE.png");
+//     }
+// }
+// .swiper-slide .logo_pkw {
+//     background-image: url("/css/images/logo_pkw.png");
+//     display: block;
+//     height: 87px;
+//     width: 100%;
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//     background-size: contain;
+//     &:hover {
+//         background-image: url("/css/images/pkw.png");
+//     }
+// }
+// .swiper-slide .logo_podvispark {
+//     background-image: url("/css/images/logo_podvispark.png");
+//     display: block;
+//     height: 160px;
+//     width: 100%;
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//     background-size: contain;
+//     &:hover {
+//         background-image: url("/css/images/podvispark.png");
+//     }
+// }
+// .swiper-slide .logo_romytech {
+//     background-image: url("/css/images/logo_romytech.png");
+//     display: block;
+//     height: 34px;
+//     width: 100%;
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//     background-size: contain;
+//     &:hover {
+//         background-image: url("/css/images/logo_romytech.png"); // no color change on hover - white logo
+//     }
+// }
+// .swiper-slide .logo_royal_kavarna {
+//     background-image: url("/css/images/logo_royals_kavarna.png");
+//     display: block;
+//     height: 180px;
+//     width: 100%;
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//     background-size: contain;
+//     &:hover {
+//         background-image: url("/css/images/royals_kavarna_logo.png");
+//     }
+// }
+// .swiper-slide .logo_winnertips {
+//     background-image: url("/css/images/logo_winnertips.png");
+//     display: block;
+//     height: 35px;
+//     width: 100%;
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//     background-size: contain;
+//     &:hover {
+//         background-image: url("/css/images/winnertips.png");
+//     }
+// }
+// .swiper-slide .logo_zov {
+//     background-image: url("/css/images/logo_zov.png");
+//     display: block;
+//     height: 93px;
+//     width: 100%;
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//     background-size: contain;
+//     &:hover {
+//         background-image: url("/css/images/zov.png");
+//     }
+// }
+.slider .swiper-button-next {
+    background: url("/css/images/right_arrow.png") no-repeat;
+    z-index: 1;
+    margin-top: -18px;
+}
+
+.slider .swiper-button-prev {
+    background: url("/css/images/left_arrow.png") no-repeat;
+    z-index: 1;
+    margin-top: -18px;
 }
 
 @media #{$desktop} {

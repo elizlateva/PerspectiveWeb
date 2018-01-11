@@ -19,61 +19,6 @@
     & .circle_center_wrapper {
         & .circle_center {
             padding: 20px;
-            & .circle {
-                width: 140px;
-                height: 140px;
-                border-radius: 50%;
-                border: 2px solid $blue;
-                display: block;
-                margin: 0 auto;
-                & .icon.research:before {
-                    display: block;
-                    content: url('/css/images/research_blue.png');
-                }
-                & .icon.design:before {
-                    display: block;
-                    content: url('/css/images/design_blue.png');
-                }
-                & .icon.development:before {
-                    display: block;
-                    content: url('/css/images/development_blue.png');
-                }
-                & .icon.mobile:before {
-                    display: block;
-                    content: url('/css/images/mobile_app_blue.png');
-                }
-                & .icon {
-                    display: block;
-                    text-align: center;
-                    font-family: $font-family;
-                    color: $blue;
-                    font-size: $font-size-15;
-                    line-height: 25px;
-                    font-weight: 500;
-                    margin-top: 20px;
-                }
-                &:hover {
-                    background: $blue;
-                }
-                &:hover .icon {
-                    color: $white;
-                }
-                &:hover .icon.research:before {
-                    content: url('/css/images/research_white.png');
-                }
-                &:hover .icon.design:before {
-                    display: block;
-                    content: url('/css/images/design_white.png');
-                }
-                &:hover .icon.development:before {
-                    display: block;
-                    content: url('/css/images/development_white.png');
-                }
-                &:hover .icon.mobile:before {
-                    display: block;
-                    content: url('/css/images/mobile_white.png');
-                }
-            }
             & p {
                 color: $dark;
                 font-size: 13px;
@@ -83,6 +28,62 @@
                 word-break: keep-all;
             }
         }
+    }
+}
+
+.circle {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 2px solid $blue;
+    display: block;
+    margin: 0 auto;
+    & .icon.research:before {
+        display: block;
+        content: url('/css/images/research_blue.png');
+    }
+    & .icon.design:before {
+        display: block;
+        content: url('/css/images/design_blue.png');
+    }
+    & .icon.development:before {
+        display: block;
+        content: url('/css/images/development_blue.png');
+    }
+    & .icon.mobile:before {
+        display: block;
+        content: url('/css/images/mobile_app_blue.png');
+    }
+    & .icon {
+        display: block;
+        text-align: center;
+        font-family: $font-family;
+        color: $blue;
+        font-size: $font-size-15;
+        line-height: 25px;
+        font-weight: 500;
+        margin-top: 20px;
+    }
+    &:hover {
+        background: $blue;
+    }
+    &:hover .icon {
+        color: $white;
+    }
+    &:hover .icon.research:before {
+        content: url('/css/images/research_white.png');
+    }
+    &:hover .icon.design:before {
+        display: block;
+        content: url('/css/images/design_white.png');
+    }
+    &:hover .icon.development:before {
+        display: block;
+        content: url('/css/images/development_white.png');
+    }
+    &:hover .icon.mobile:before {
+        display: block;
+        content: url('/css/images/mobile_white.png');
     }
 }
 

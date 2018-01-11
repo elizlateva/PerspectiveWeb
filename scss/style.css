@@ -693,7 +693,16 @@ p {
   padding: 20px;
 }
 
-.text_center_white .circle_center_wrapper .circle_center .circle {
+.text_center_white .circle_center_wrapper .circle_center p {
+  color: #676767;
+  font-size: 13px;
+  font-weight: 300;
+  margin-top: 30px;
+  text-align: center;
+  word-break: keep-all;
+}
+
+.circle {
   width: 140px;
   height: 140px;
   border-radius: 50%;
@@ -702,27 +711,27 @@ p {
   margin: 0 auto;
 }
 
-.text_center_white .circle_center_wrapper .circle_center .circle .icon.research:before {
+.circle .icon.research:before {
   display: block;
   content: url("/css/images/research_blue.png");
 }
 
-.text_center_white .circle_center_wrapper .circle_center .circle .icon.design:before {
+.circle .icon.design:before {
   display: block;
   content: url("/css/images/design_blue.png");
 }
 
-.text_center_white .circle_center_wrapper .circle_center .circle .icon.development:before {
+.circle .icon.development:before {
   display: block;
   content: url("/css/images/development_blue.png");
 }
 
-.text_center_white .circle_center_wrapper .circle_center .circle .icon.mobile:before {
+.circle .icon.mobile:before {
   display: block;
   content: url("/css/images/mobile_app_blue.png");
 }
 
-.text_center_white .circle_center_wrapper .circle_center .circle .icon {
+.circle .icon {
   display: block;
   text-align: center;
   font-family: "Open Sans", sans-serif;
@@ -733,40 +742,31 @@ p {
   margin-top: 20px;
 }
 
-.text_center_white .circle_center_wrapper .circle_center .circle:hover {
+.circle:hover {
   background: #209ae7;
 }
 
-.text_center_white .circle_center_wrapper .circle_center .circle:hover .icon {
+.circle:hover .icon {
   color: #fff;
 }
 
-.text_center_white .circle_center_wrapper .circle_center .circle:hover .icon.research:before {
+.circle:hover .icon.research:before {
   content: url("/css/images/research_white.png");
 }
 
-.text_center_white .circle_center_wrapper .circle_center .circle:hover .icon.design:before {
+.circle:hover .icon.design:before {
   display: block;
   content: url("/css/images/design_white.png");
 }
 
-.text_center_white .circle_center_wrapper .circle_center .circle:hover .icon.development:before {
+.circle:hover .icon.development:before {
   display: block;
   content: url("/css/images/development_white.png");
 }
 
-.text_center_white .circle_center_wrapper .circle_center .circle:hover .icon.mobile:before {
+.circle:hover .icon.mobile:before {
   display: block;
   content: url("/css/images/mobile_white.png");
-}
-
-.text_center_white .circle_center_wrapper .circle_center p {
-  color: #676767;
-  font-size: 13px;
-  font-weight: 300;
-  margin-top: 30px;
-  text-align: center;
-  word-break: keep-all;
 }
 
 @media only screen and (min-width: 768px) {
@@ -827,7 +827,7 @@ p {
   overflow: hidden;
   margin-bottom: 20px;
   position: relative;
-  border: 2px solid #b9b9b9;
+  border: 2px solid #f0f8ff;
 }
 
 .gallery .gallery_project img {
@@ -868,7 +868,7 @@ p {
   font-weight: 300;
   text-align: center;
   display: block;
-  margin-top: 7%;
+  margin-top: 15%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -918,16 +918,18 @@ p {
   width: 80%;
 }
 
-.slider .swiper-container .swiper-slide .swiper-slide-image-container {
-  text-align: center;
+.swiper-slide img {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
-.slider .swiper-container .swiper-slide .swiper-slide-image-container .logo_aeropark {
-  padding-top: 15px;
-}
-
-.slider .swiper-container .swiper-slide .swiper-slide-image-container .logo_parking_valet {
-  padding-top: 17px;
+.swiper-slide img:hover {
+  transition: filter .5s ease-in-out;
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
 }
 
 .slider .swiper-button-next {
@@ -1017,17 +1019,17 @@ p {
   font-size: 13px;
 }
 
-.footer .footer_center .social_icons {
+.social_icons {
   text-align: center;
-  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-.footer .footer_center .social_icons li {
+.social_icons li {
   display: inline-block;
   margin: 0 7px;
 }
 
-.footer .footer_center .social_icons li .fa {
+.social_icons li .fa {
   font-family: FontAwesome;
   font-size: 30px;
   font-weight: 400;
@@ -1035,7 +1037,7 @@ p {
   color: #546374;
 }
 
-.footer .footer_center .social_icons li .fa:hover {
+.social_icons li .fa:hover {
   color: #fff;
 }
 
@@ -1052,7 +1054,7 @@ p {
   }
   .footer .footer_center .social_icons {
     float: right;
-    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
