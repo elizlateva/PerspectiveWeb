@@ -926,12 +926,6 @@ p {
   filter: grayscale(100%);
 }
 
-.swiper-slide img:hover {
-  transition: filter .5s ease-in-out;
-  -webkit-filter: grayscale(0%);
-  filter: grayscale(0%);
-}
-
 .swiper-slide .logo_easpd img,
 .swiper-slide .logo_pkw img,
 .swiper-slide .logo_tobeproper img,
@@ -994,6 +988,11 @@ p {
   }
   .slider {
     width: 980px;
+  }
+  .swiper-slide img:hover {
+    transition: filter .5s ease-in-out;
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
   }
 }
 

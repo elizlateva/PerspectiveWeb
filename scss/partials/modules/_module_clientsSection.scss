@@ -23,12 +23,11 @@
     -ms-filter: grayscale(100%);
     -o-filter: grayscale(100%);
     filter: grayscale(100%);
-    ;
-    &:hover {
-        transition: filter .5s ease-in-out;
-        -webkit-filter: grayscale(0%); //Ch 23+, Saf 6.0+, BB 10.0+ 
-        filter: grayscale(0%); // FF 35+
-    }
+    // &:hover {
+    //     transition: filter .5s ease-in-out;
+    //     -webkit-filter: grayscale(0%); //Ch 23+, Saf 6.0+, BB 10.0+ 
+    //     filter: grayscale(0%); // FF 35+
+    // }
 }
 
 .swiper-slide .logo_easpd img,
@@ -444,5 +443,11 @@
     }
     .slider {
         width: 980px;
+    }
+    //Not work in IE11
+    .swiper-slide img:hover {
+        transition: filter .5s ease-in-out;
+        -webkit-filter: grayscale(0%); //Ch 23+, Saf 6.0+, BB 10.0+ 
+        filter: grayscale(0%); // FF 35+
     }
 }
