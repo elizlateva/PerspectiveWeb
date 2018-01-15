@@ -473,6 +473,7 @@ p {
 
 .nav .nav_wrapper ul li a:hover:after, .nav .nav_wrapper ul li a:active:after {
   opacity: 1;
+  bottom: 0;
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   transform: translateY(0);
@@ -481,9 +482,9 @@ p {
 .nav .nav_wrapper ul li a:hover:before, .nav .nav_wrapper ul li a:active:before {
   opacity: 1;
   top: 0;
-  -webkit-transform: translateY(-10px);
-  -moz-transform: translateY(-10px);
-  transform: translateY(-10px);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  transform: translateY(0);
 }
 
 .nav .nav_wrapper .logo_nav {

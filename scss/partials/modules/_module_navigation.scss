@@ -57,6 +57,7 @@
                     &:hover:after,
                     &:active:after {
                         opacity: 1;
+                        bottom: 0;
                         -webkit-transform: translateY(0);
                         -moz-transform: translateY(0);
                         transform: translateY(0);
@@ -65,9 +66,9 @@
                     &:active:before {
                         opacity: 1;
                         top: 0;
-                        -webkit-transform: translateY(-10px);
-                        -moz-transform: translateY(-10px);
-                        transform: translateY(-10px);
+                        -webkit-transform: translateY(0);
+                        -moz-transform: translateY(0);
+                        transform: translateY(0);
                     }
                 }
             }
