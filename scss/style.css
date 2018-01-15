@@ -933,19 +933,18 @@ p {
 }
 
 .swiper-slide .logo_easpd img,
-.swiper-slide .logo_bigla img,
 .swiper-slide .logo_pkw img,
+.swiper-slide .logo_tobeproper img,
 .swiper-slide .logo_royal_kavarna img {
   margin-top: 10px;
 }
 
 .swiper-slide .logo_airlia img,
 .swiper-slide .logo_GVA img,
+.swiper-slide .logo_bigla img,
 .swiper-slide .logo_hydropro img,
 .swiper-slide .logo_aviata-cruises img,
 .swiper-slide .logo_elite_estate img,
-.swiper-slide .logo_dani img,
-.swiper-slide .logo_motobul img,
 .swiper-slide .logo_zov img {
   margin-top: 15px;
 }
@@ -953,20 +952,28 @@ p {
 .swiper-slide .logo_bulins img,
 .swiper-slide .logo_cocologo img,
 .swiper-slide .logo_disability img,
-.swiper-slide .logo_brevis img,
-.swiper-slide .logo_hydroweb img {
+.swiper-slide .logo_dani img,
+.swiper-slide .logo_motobul img,
+.swiper-slide .logo_brevis img {
   margin-top: 25px;
+}
+
+.swiper-slide .logo_hydroweb img {
+  margin-top: 30px;
+}
+
+.swiper-slide .logo_ambra img,
+.swiper-slide .logo_romytech img,
+.swiper-slide .logo_winnertips img {
+  margin-top: 35px;
 }
 
 .swiper-slide .logo_aeropark img,
 .swiper-slide .logo_parking_valet img,
-.swiper-slide .logo_ambra img,
 .swiper-slide .logo_ihc_ships img,
-.swiper-slide .logo_julian_kostov img,
 .swiper-slide .logo_mashinite img,
-.swiper-slide .logo_romytech img,
-.swiper-slide .logo_winnertips img {
-  margin-top: 35px;
+.swiper-slide .logo_julian_kostov img {
+  margin-top: 40px;
 }
 
 .slider .swiper-button-next {
