@@ -682,36 +682,7 @@ p {
   word-break: keep-all;
 }
 
-.circle {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  border: 2px solid #209ae7;
-  display: block;
-  margin: 0 auto;
-}
-
-.circle .icon.research:before {
-  display: block;
-  content: url("/css/images/research_blue.png");
-}
-
-.circle .icon.design:before {
-  display: block;
-  content: url("/css/images/design_blue.png");
-}
-
-.circle .icon.development:before {
-  display: block;
-  content: url("/css/images/development_blue.png");
-}
-
-.circle .icon.mobile:before {
-  display: block;
-  content: url("/css/images/mobile_app_blue.png");
-}
-
-.circle .icon {
+.icon {
   display: block;
   text-align: center;
   font-family: "Open Sans", sans-serif;
@@ -720,6 +691,35 @@ p {
   line-height: 25px;
   font-weight: 500;
   margin-top: 20px;
+}
+
+.icon.research:before {
+  display: block;
+  content: url("/css/images/research_blue.png");
+}
+
+.icon.design:before {
+  display: block;
+  content: url("/css/images/design_blue.png");
+}
+
+.icon.development:before {
+  display: block;
+  content: url("/css/images/development_blue.png");
+}
+
+.icon.mobile:before {
+  display: block;
+  content: url("/css/images/mobile_app_blue.png");
+}
+
+.circle {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 2px solid #209ae7;
+  display: block;
+  margin: 0 auto;
 }
 
 .circle:hover {
