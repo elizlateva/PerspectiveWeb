@@ -16,20 +16,16 @@
     }
 }
 
-//Not work in IE11
+//grayscale filter-not work in IE11, images will be colored
 .swiper-slide img {
-    -webkit-filter: grayscale(100%); // Ch 23+, Saf 6.0+, BB 10.0+ 
-    filter: grayscale(100%); // FF 35+ 
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
     -ms-filter: grayscale(100%);
     -o-filter: grayscale(100%);
     filter: grayscale(100%);
-    // &:hover {
-    //     transition: filter .5s ease-in-out;
-    //     -webkit-filter: grayscale(0%); //Ch 23+, Saf 6.0+, BB 10.0+ 
-    //     filter: grayscale(0%); // FF 35+
-    // }
 }
 
+// aligning images in slider
 .swiper-slide .logo_easpd img,
 .swiper-slide .logo_pkw img,
 .swiper-slide .logo_tobeproper img,
@@ -74,6 +70,7 @@
     margin-top: 40px;
 }
 
+// css code for logos like background images, and their hover changes
 // .swiper-slide .logo_airlia {
 //     background-image: url("/css/images/logo_airlia.png");
 //     display: block;
@@ -444,10 +441,9 @@
     .slider {
         width: 980px;
     }
-    //Not work in IE11
     .swiper-slide img:hover {
         transition: filter .5s ease-in-out;
-        -webkit-filter: grayscale(0%); //Ch 23+, Saf 6.0+, BB 10.0+ 
-        filter: grayscale(0%); // FF 35+
+        -webkit-filter: grayscale(0%);
+        filter: grayscale(0%);
     }
 }
