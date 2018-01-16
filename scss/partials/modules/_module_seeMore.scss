@@ -23,17 +23,8 @@
         font-weight: 600;
     }
     &:after {
-        content: '';
-        position: absolute;
-        width: 100%;
         background: $white;
-        height: 0;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        -webkit-transition: all .3s;
-        -moz-transition: all .3s;
-        transition: all .3s;
+        @extend %button-after;
     }
     &:hover:after {
         height: 100%;
@@ -50,19 +41,23 @@
         font-weight: 600;
     }
     &:after {
-        content: '';
-        position: absolute;
-        width: 100%;
         background: $blue;
-        height: 0;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        -webkit-transition: all .3s;
-        -moz-transition: all .3s;
-        transition: all .3s;
+        @extend %button-after;
     }
     &:hover:after {
         height: 100%;
     }
+}
+
+%button-after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
 }

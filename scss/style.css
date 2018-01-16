@@ -1,7 +1,5 @@
 /* ------------------------------------------------------------ *    Imports
 \* ------------------------------------------------------------ */
-/* ------------------------------------------------------------ *	Fonts
-\* ------------------------------------------------------------ */
 /* ------------------------------------------------------------ *    Variables
 \* ------------------------------------------------------------ */
 /*  Colors  */
@@ -547,17 +545,7 @@ p {
 }
 
 .btn_right_arrow.white:after {
-  content: '';
-  position: absolute;
-  width: 100%;
   background: #fff;
-  height: 0;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  -webkit-transition: all .3s;
-  -moz-transition: all .3s;
-  transition: all .3s;
 }
 
 .btn_right_arrow.white:hover:after {
@@ -576,10 +564,17 @@ p {
 }
 
 .btn_right_arrow.blue:after {
+  background: #209ae7;
+}
+
+.btn_right_arrow.blue:hover:after {
+  height: 100%;
+}
+
+.btn_right_arrow.white:after, .btn_right_arrow.blue:after {
   content: '';
   position: absolute;
   width: 100%;
-  background: #209ae7;
   height: 0;
   top: 0;
   left: 0;
@@ -587,10 +582,6 @@ p {
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
   transition: all .3s;
-}
-
-.btn_right_arrow.blue:hover:after {
-  height: 100%;
 }
 
 /* ------------------------------------------------------------ *	Scroll-down
