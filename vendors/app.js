@@ -18,6 +18,7 @@ $(document).ready(function() {
 
         $('html,body').animate({ scrollTop: scrollTopOffset }, 400);
     });
+    // initialization of Swiper js
 
     var partnersSwiper = new Swiper('.clients .swiper-container', {
         nextButton: '.swiper-button-next',
