@@ -20,24 +20,25 @@
     vertical-align: middle;
     text-align: center;
     padding-top: 100px;
-    & .text_center {
-        margin: 0 auto;
-        width: 90%;
-        margin-right: 5%;
-        margin-left: 5%;
-        margin-bottom: 20px;
-        & .logo {
-            display: block;
-        }
-        & .intro_title {
-            font-size: $font-size-30;
-            color: $white;
-            letter-spacing: 2px;
-            margin: 50px 0;
-            display: block;
-            &:hover:after {
-                border-bottom: none;
-            }
+}
+
+.text_center {
+    margin: 0 auto;
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 20px;
+    & .logo {
+        display: block;
+    }
+    & .intro_title {
+        font-size: $font-size-30;
+        color: $white;
+        letter-spacing: 2px;
+        margin: 50px 0;
+        display: block;
+        &:hover:after {
+            border-bottom: none;
         }
     }
 }
@@ -48,14 +49,14 @@
         max-height: -webkit-calc(100% - 91px);
         max-height: -moz-calc(100% - 91px);
     }
-    .text_center_inner .text_center .intro_title {
+    .text_center .intro_title {
         font-size: 50px;
         margin: 100px 0;
     }
 }
 
 @media only screen and (min-width: 1100px) {
-    .text_center_inner .text_center .intro_title {
+    .text_center .intro_title {
         font-size: 60px;
         margin: 100px 0;
     }
