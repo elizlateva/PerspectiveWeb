@@ -2,7 +2,7 @@
 	Contact page
 \* ------------------------------------------------------------ */
 .contact_form{
-    background:url("/css/images/contact_background.png");
+    background:url("../css/images/contact_background.png");
     text-align: center;
 }
 
@@ -55,7 +55,7 @@
     &.white{
         background: $white;
         color: $black;
-        background-image: url("/css/images/caret_down.png");
+        background-image: url("../css/images/caret_down.png");
         background-position: center right 5%;
         background-repeat: no-repeat;
     }
@@ -181,7 +181,7 @@ li.address:before {
 }
 
 #map{
-    background: url("/css/images/map_perspective.png") no-repeat;
+    background: url("../css/images/map_perspective.png") no-repeat;
     background-size: cover;
     background-position: center center;
     min-height: 450px;
